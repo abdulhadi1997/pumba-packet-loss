@@ -19,7 +19,7 @@ Node pumbaPacketLoss.js
 
 ## Explanation
 
-The main function *runChaosTests* has a boolean parameter which when returned true will handle starting & stopping the docker container that the tweets app is running on at the start & end of the tests.
+The main function *runChaosTests* has a boolean parameter which when returned true will handle starting & stopping the docker container (on which the tweets app is running on) at the start & end of the tests. It is set to false by default so it currently expects the Docker container to be running.
 
 Moreover, for each percentage, once the pumba netem command is executed, the test will ping the URL 'http://localhost:8082/tweets' 10 times. 
 

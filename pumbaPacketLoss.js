@@ -43,7 +43,7 @@ async function measureResponseTime() {
 }
 
 // Main loop for chaos testing
-async function runChaosTests(handleDocker) {
+async function runChaosTests(handleDocker=false) {
     if(handleDocker==true){
         manageDockerImage('start')
         await sleep(5000)
@@ -71,4 +71,4 @@ async function runChaosTests(handleDocker) {
     }
 }
 
-runChaosTests(false);
+runChaosTests();
